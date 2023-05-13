@@ -14,7 +14,7 @@ level_choices = [
 ]
 
 
-class Insident(models.Model):
+class Incident(models.Model):
     tipe = models.CharField(max_length=2, choices=tipe_incident)
     level = models.CharField(max_length=3, choices=level_choices)
     url = models.URLField()
