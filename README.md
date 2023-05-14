@@ -35,3 +35,8 @@ También pueden obtener la rama de Git que tiene el mismo material
 
 # Instrucciones
 
+El sistema pretende capturar una incidencia para el equipo DevOps de un usuario.
+El usuario puede elegir entre dos tipos de incidencias "Incident" o "Request", así como también
+la prioridad de la urgencia.
+También puede registrar una URL del servicio afectado, un comentario o una imagen adjunta de una captura
+para la mejor comprensión de la incidencia, además de registrar el usuario que realiza el Ticket o Issue.
