@@ -9,16 +9,17 @@ tipe_incident = [
 level_choices = [
     ("Low", "Bajo"),
     ("Mid", "Medio"),
-    ("Hi", "Alta"),
-    ("VHi", "Critico"),
+    ("MidHi", "Alta"),
+    ("Hi", "Critico"),
 ]
 
 
 class Incident(models.Model):
     tipe = models.CharField(max_length=2, choices=tipe_incident)
-    level = models.CharField(max_length=3, choices=level_choices)
+    level = models.CharField(max_length=5, choices=level_choices)
     url = models.URLField()
     project = models.CharField(max_length=40)
+    date = models.DateField()
 
     def __str__(self):
         return f"{self.tipe} --> {self.level}"
