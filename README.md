@@ -15,13 +15,13 @@ Proyecto Web Django con patron MVT que incluya:
 4. -[ ] Un formulario para buscar algo en la DB.
 5. -[ ] Readme que indique el orden en el que se prueban las cosas y/o donde están las funcionalidades.
 
-| TODO                                                                         | IN PROGRES         | IN PARKING                                                                                                 | DONE       |
-|:-----------------------------------------------------------------------------|:-------------------|:-----------------------------------------------------------------------------------------------------------|:-----------|
-|                                                                              | Herencia de HTML   | Readme que indique el orden <br/>en el que se prueban las cosas <br/>y/o donde están las funcionalidades   |            |
-|                                                                              |                    |                                                                                                            | 3 clases   |
-| Un formulario para <br/>insertar datos a <br/>todas las clases de tus models |                    |                                                                                                            |            |
-| Un formulario para buscar algo en la DB                                      |                    |                                                                                                            |            |
-|                                                                              |                    |                                                                                                            |            |
+| TODO                                    | IN PROGRES                                                                   | IN PARKING                                                                                                 | DONE             |
+|:----------------------------------------|:-----------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|:-----------------|
+| Un formulario para buscar algo en la DB | Un formulario para <br/>insertar datos a <br/>todas las clases de tus models | Readme que indique el orden <br/>en el que se prueban las cosas <br/>y/o donde están las funcionalidades   | 3 clases         |
+|                                         |                                                                              |                                                                                                            | Herencia de HTML |
+|                                         |                                                                              |                                                                                                            |                  |
+|                                         |                                                                              |                                                                                                            |                  |
+|                                         |                                                                              |                                                                                                            |                  |
 
 #### Formato
 
