@@ -19,7 +19,8 @@ class Incident(models.Model):
     level = models.CharField(max_length=5, choices=level_choices)
     url = models.URLField()
     project = models.CharField(max_length=40)
-    date = models.DateField()
+    date_time = models.DateTimeField(auto_now_add=True)
+
 
     def __str__(self):
         return f"{self.tipe} --> {self.level}"

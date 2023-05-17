@@ -17,3 +17,7 @@ def blog_view(request):
 
 def contact_view(request):
     return render(request, 'contact.html', {})
+
+
+def form_view(request):
+    return render(request, 'form.html', {})
