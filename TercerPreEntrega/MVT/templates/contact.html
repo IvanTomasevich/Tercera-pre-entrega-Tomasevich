@@ -1,48 +1,9 @@
 {% extends "base.html" %}
 
 {% block contenido %}
-<br>
-<div class="mb-3">
-  <label for="apellido" class="form-label">Apellido</label>
-  <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-</div>
-<div class="mb-3">
-  <label for="nombre" class="form-label">Nombre</label>
-  <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<br>
-<select class="form-select" aria-label="Default select example">
-  <option selected>Tipo de solicitud</option>
-  <option value="Incident">Incident</option>
-  <option value="Request">Request</option>
-</select>
-<br>
-<select class="form-select" aria-label="Default select example">
-  <option selected>Nivel de prioridad</option>
-  <option value="1">Baja</option>
-  <option value="2">Media</option>
-  <option value="3">Alta</option>
-  <option value="3">Critica</option>
-</select>
-<br>
-<div class="mb-3">
-  <label for="URL" class="form-label">URL</label>
-  <input type="text" class="form-control" id="URL" placeholder="URL del pipeline - URL del Deploy">
-</div>
-<br>
-<div class="mb-3">
-  <label for="proyecto" class="form-label">Proyecto</label>
-  <input type="text" class="form-control" id="proyecto" placeholder="Cliente - Pipeline">
-</div>
-<br>
-<div class="input-group">
-  <span class="input-group-text">Comentario</span>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
-</div>
-<br>
-
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Enviar">
+</form>
 {% endblock %}

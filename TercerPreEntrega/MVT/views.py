@@ -33,4 +33,4 @@ def formulario_view(request):
     else:
         form = FormularioIssue()
 
-    return render(request, 'MVT/contact.html', {'form': form})
+    return render(request, 'contact.html', {'form': form})
