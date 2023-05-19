@@ -9,7 +9,7 @@ Desarrollar una WEB Django con patrón Modelo Vista Template subida a Github.
 Link de Github con el proyecto subido a la plataforma.
 Proyecto Web Django con patron MVT que incluya:
 
-1. -[ ] Herencia de [HTML](TercerPreEntrega%2FMVT%2Ftemplates).
+1. -[x] Herencia de [HTML](TercerPreEntrega%2FMVT%2Ftemplates).
 2. -[x] Por lo menos 3 [clases](TercerPreEntrega%2FMVT%2Fmodels.py).
 3. -[ ] Un formulario para insertar datos a todas las clases de tus models.
 4. -[ ] Un formulario para buscar algo en la DB.

@@ -42,3 +42,8 @@ class FormularioCreateTicket(CreateView):
     model = Incident
     fields = ('tipe', 'level', 'url', 'project')
     success_url = reverse_lazy('blog')
+
+
+class ViewTicket(ListView):
+    model = Incident
+    template_name = 'blog.html'

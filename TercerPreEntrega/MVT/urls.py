@@ -16,12 +16,11 @@ Including another URLconf
 """
 from django.urls import path
 from . import views
-from MVT.views import FormularioCreateTicket
+from MVT.views import FormularioCreateTicket, ViewTicket
 
 urlpatterns = [
     path('', views.home_view, name='home'),
     path('about/', views.about_view, name='about'),
-    path('contact/', views.contact_view, name='contact'),
-    path('blog/', views.blog_view, name='blog'),
-    path('formTicket/', FormularioCreateTicket.as_view(), name='FormTicket'),
+    path('contact/', FormularioCreateTicket.as_view(), name='contact'),
+    path('blog/', ViewTicket.as_view(), name='blog'),
 ]
