@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from MVT.models import *
+from .forms import FormularioIssue
 
 # Create your views here.
 
@@ -19,5 +21,16 @@ def contact_view(request):
     return render(request, 'contact.html', {})
 
 
-def form_view(request):
-    return render(request, 'form.html', {})
+def formulario_view(request):
+    if request.method == 'POST':
+        form = FormularioIssue(request.POST, request.FILES)
+        if form.is_valid():
+            # Procesar los datos del formulario
+            # Acceder a los campos con form.cleaned_data
+            # Guardar la captura de pantalla con form.cleaned_data['captura_pantalla']
+            # Redireccionar o mostrar un mensaje de éxito
+            pass
+    else:
+        form = FormularioIssue()
+
+    return render(request, 'MVT/contact.html', {'form': form})
