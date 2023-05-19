@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from MVT.models import *
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
+from .models import Incident  # UserContact, Attach
 from .forms import FormularioIssue
+from django.urls import reverse, reverse_lazy
 
 # Create your views here.
 
@@ -18,6 +20,7 @@ def blog_view(request):
 
 
 def contact_view(request):
+    issues = Incident.objects.all()
     return render(request, 'contact.html', {})
 
 
@@ -32,5 +35,10 @@ def formulario_view(request):
             pass
     else:
         form = FormularioIssue()
-
     return render(request, 'contact.html', {'form': form})
+
+
+class FormularioCreateTicket(CreateView):
+    model = Incident
+    fields = ('tipe', 'level', 'url', 'project')
+    success_url = reverse_lazy('blog')
