@@ -28,3 +28,8 @@ class FormularioCreateTicket(CreateView):
 class ViewTicket(ListView):
     model = IncidentIssue
     template_name = 'blog.html'
+
+class FormularioCreateUser(CreateView):
+    model = UserIssue
+    fields = ('last_name', 'first_name', 'email', 'cel_phone')
+    success_url = reverse_lazy('blog')

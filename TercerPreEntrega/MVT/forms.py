@@ -1,4 +1,4 @@
-from django import forms
+"""from django import forms
 # from .models import tipe_incident, level_choices
 
 
@@ -16,3 +16,4 @@ class FormularioIssue(forms.Form):
     # Attach
     comentario = forms.CharField(label='Comentario', required=True, widget=forms.Textarea)
     captura_pantalla = forms.ImageField()
+"""

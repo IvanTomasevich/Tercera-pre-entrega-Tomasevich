@@ -15,9 +15,6 @@
           <th>URL</th>
             <th>Proyecto</th>
             <th>Fecha</th>
-         <!-- <td></td>
-          <td></td>
-          <td></td>-->
         </tr>
         {% for ticket in object_list %}
         <tr>
@@ -26,6 +23,24 @@
           <td>{{ ticket.url }}</td>
           <td>{{ ticket.project }}</td>
           <td>{{ ticket.date_time }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Apellido</th>
+          <th>Nombre</th>
+          <th>Email</th>
+            <th>Celular</th>
+        </tr>
+        {% for user in object_list %}
+        <tr>
+          <td>{{ user.last_name }}</td>
+          <td>{{ user.firs_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.cel_phone }}</td>
         </tr>
         {% endfor %}
       </tbody>
