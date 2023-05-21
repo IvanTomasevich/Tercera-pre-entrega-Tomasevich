@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
-from .models import Incident  # UserContact, Attach
-from .forms import FormularioIssue
+from .models import IncidentIssue, UserIssue, AttachIssue
+# from .forms import FormularioIssue
 from django.urls import reverse, reverse_lazy
 
 # Create your views here.
@@ -20,11 +20,11 @@ def blog_view(request):
 
 
 class FormularioCreateTicket(CreateView):
-    model = Incident
+    model = IncidentIssue
     fields = ('tipe', 'level', 'url', 'project')
     success_url = reverse_lazy('blog')
 
 
 class ViewTicket(ListView):
-    model = Incident
+    model = IncidentIssue
     template_name = 'blog.html'
