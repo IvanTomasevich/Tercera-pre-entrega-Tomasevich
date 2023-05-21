@@ -4,9 +4,8 @@
 <section>
   <div>
     <h1>Tickets</h1>
-    <a href="{% url 'contact' %}">Crear ticket</a>
+    <a href="{% url 'ticket' %}">Crear ticket</a>
     <br>
-
     <table class="table">
       <tbody>
         <tr>
@@ -27,25 +26,6 @@
         {% endfor %}
       </tbody>
     </table>
-    <table class="table">
-      <tbody>
-        <tr>
-          <th>Apellido</th>
-          <th>Nombre</th>
-          <th>Email</th>
-            <th>Celular</th>
-        </tr>
-        {% for user in object_list %}
-        <tr>
-          <td>{{ user.last_name }}</td>
-          <td>{{ user.firs_name }}</td>
-          <td>{{ user.email }}</td>
-          <td>{{ user.cel_phone }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-
   </div>
 </section>
 

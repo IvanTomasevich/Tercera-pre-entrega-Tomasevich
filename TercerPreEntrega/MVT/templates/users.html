@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<section>
+  <div>
+    <h1>Users</h1>
+    <a href="{% url 'user' %}">Crear User</a>
+    <br>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Apellido</th>
+          <th>Nombre</th>
+          <th>Email</th>
+            <th>Celular</th>
+        </tr>
+        {% for user in object_list %}
+        <tr>
+          <td>{{ user.last_name }}</td>
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.cel_phone }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+{% endblock %}
