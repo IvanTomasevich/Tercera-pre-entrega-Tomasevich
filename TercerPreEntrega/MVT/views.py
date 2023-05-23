@@ -11,6 +11,22 @@ def home_view(request):
     return render(request, 'home.html', {})
 
 
+def buscar_usuario(request):
+    if request.method == "POST":
+        data = request.POST
+        busqueda = data["busqueda"]
+        users = UserIssue.objects.filter(last_name__contains=busqueda)
+        contexto = {
+            "users": users,
+        }
+        http_response = render(
+            request=request,
+            template_name='MVT/users.html',
+            context=contexto,
+        )
+        return http_response
+
+
 class FormularioCreateTicket(CreateView):
     model = IncidentIssue
     fields = ('tipe', 'level', 'url', 'project')
