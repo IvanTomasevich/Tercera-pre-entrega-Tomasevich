@@ -15,7 +15,7 @@ def buscar_usuario(request):
     if request.method == "POST":
         data = request.POST
         busqueda = data["busqueda"]
-        users = UserIssue.objects.filter(last_name__contains=busqueda)
+        users = UserIssue.objects.filter(last_name=busqueda)
         contexto = {
             "users": users,
         }

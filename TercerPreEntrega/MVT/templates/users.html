@@ -3,7 +3,7 @@
 {% block contenido %}
 <section>
   <div>
-    <a href="{% url 'user' %}">Crear User</a><!-- TODO arreglar este copy-->
+    <a href="{% url 'user' %}">Crear User</a>
     <br><br>
     <form action="{% url 'buscar_usuario' %}" method="post">
       {% csrf_token %}
