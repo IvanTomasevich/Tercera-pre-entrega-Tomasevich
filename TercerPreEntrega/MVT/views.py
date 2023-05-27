@@ -14,17 +14,12 @@ def home_view(request):
 def buscar_usuario(request):
     if request.method == "POST":
         data = request.POST
-        busqueda = data["busqueda"]
-        users = UserIssue.objects.filter(last_name=busqueda)
-        contexto = {
-            "users": users,
-        }
-        http_response = render(
-            request=request,
-            template_name='MVT/users.html',
-            context=contexto,
-        )
-        return http_response
+        buscar = data["buscar"]
+        print(buscar)
+        users = UserIssue.objects.filter(last_name__icontains=buscar)
+        print(users)
+
+        return render(request, 'users.html', {"users": users})
 
 
 class FormularioCreateTicket(CreateView):

@@ -7,7 +7,7 @@
     <br><br>
     <form action="{% url 'buscar_usuario' %}" method="post">
       {% csrf_token %}
-      <input type="text" name="busqueda">
+      <input type="text" name="buscar">
       <input type="submit" value="Buscar por Apellido">
     </form>
     <br>
@@ -18,9 +18,17 @@
           <th>Apellido</th>
           <th>Nombre</th>
           <th>Email</th>
-            <th>Celular</th>
+          <th>Celular</th>
         </tr>
-        {% for user in object_list %}
+        {% for user in users %}
+        <tr>
+          <td>{{ user.last_name }}</td>
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.cel_phone }}</td>
+        </tr>
+        {% endfor %}
+      {% for user in object_list %}
         <tr>
           <td>{{ user.last_name }}</td>
           <td>{{ user.first_name }}</td>
