@@ -11,21 +11,21 @@ Proyecto Web Django con patron MVT que incluya:
 
 1. -[x] Herencia de [HTML](TercerPreEntrega%2FMVT%2Ftemplates).
 2. -[x] Por lo menos 3 [clases](TercerPreEntrega%2FMVT%2Fmodels.py).
-3. -[ ] Un formulario para insertar datos a todas las clases de tus models.
-4. -[ ] Un formulario para buscar algo en la DB.
-5. -[ ] Readme que indique el orden en el que se prueban las cosas y/o donde están las funcionalidades.
+3. -[x] Un formulario para insertar datos a todas las clases de tus models.
+4. -[x] Un formulario para buscar algo en la DB.
+5. -[x] Readme que indique el orden en el que se prueban las cosas y/o donde están las funcionalidades.
 
-| TODO                                    | IN PROGRES                                                                   | IN PARKING                                                                                                 | DONE             |
-|:----------------------------------------|:-----------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|:-----------------|
-| Un formulario para buscar algo en la DB | Un formulario para <br/>insertar datos a <br/>todas las clases de tus models | Readme que indique el orden <br/>en el que se prueban las cosas <br/>y/o donde están las funcionalidades   | 3 clases         |
-|                                         |                                                                              |                                                                                                            | Herencia de HTML |
-|                                         |                                                                              |                                                                                                            |                  |
-|                                         |                                                                              |                                                                                                            |                  |
-|                                         |                                                                              |                                                                                                            |                  |
+| TODO | IN PROGRES | IN PARKING | DONE                                                                                                      |
+|:-----|:-----------|:-----------|:----------------------------------------------------------------------------------------------------------|
+|      |            |            | 3 clases                                                                                                  |
+|      |            |            | Herencia de HTML                                                                                          |
+|      |            |            | Un formulario para <br/>insertar datos a <br/>todas las clases de tus models                              |
+|      |            |            | Un formulario para buscar algo en la DB                                                                   |
+|      |            |            | Readme que indique el orden <br/>en el que se prueban las cosas <br/>y/o donde están las funcionalidades  |
 
 #### Formato
 
-- [ ] Link al repositorio de Github con nombre "Tercera pre-entrega+Apellido".
+- [x] Link al repositorio de Github con nombre "Tercera pre-entrega+Apellido".
 
 #### Sugerencias
 
@@ -35,8 +35,9 @@ También pueden obtener la rama de Git que tiene el mismo material
 
 # Instrucciones
 
-El sistema pretende capturar una incidencia para el equipo DevOps de un usuario.
-El usuario puede elegir entre dos tipos de incidencias "Incident" o "Request", así como también
-la prioridad de la urgencia.
-También puede registrar una URL del servicio afectado, un comentario o una imagen adjunta de una captura
-para la mejor comprensión de la incidencia, además de registrar el usuario que realiza el Ticket o Issue.
+En el NAV se encuentran los TAG
+
+    Home  User  Ticket  Ticket View  User View
+
+User y Ticket son para registrar usuario y ticket en la DB.
+Ticket y User View son para listar los registros. Pero en User View tiene un método de búsqueda por **apellido**
